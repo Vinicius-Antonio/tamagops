@@ -1,0 +1,55 @@
+# Binários e Compilados (Go)
+*.exe
+*.exe~
+*.out
+*.test
+*.dll
+*.so
+*.dylib
+/daemon/bin/
+go.work
+go.work.sum
+
+# Build do app gráfico (Wails)
+/server/build/
+
+# Banco de Dados e Persistência
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+/daemon/data/
+
+# Variáveis de Ambiente e Segredos
+.env
+.env.*
+.env.local
+*.pem
+*.key
+*.crt
+*.p12
+
+# Sistema Operacional
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*.un~
+Session.vim
+.netrwhist
+tags
+
+#Dependências do frontend
+node_modules/
