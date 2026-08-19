@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TamagOps</title>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  
+  <link rel="stylesheet" href="style.css" />
+  </head>
+
+<body>
+  
+  <div class="page">
+    
+    <header class="page__header">
+            <h1 class="page__title">TamagOps</h1>
+            <span class="live-dot" id="live-dot" title="Recebendo atualizações"></span>
+          </header>
+
+    <main class="layout">
+      
+      <section class="device" aria-label="Bichinho virtual">
+        
+        <div class="device__shell">
+          
+          <div class="device__screen-bezel">
+                        <div class="lcd" id="lcd">
+              
+              <div class="lcd__scanlines" aria-hidden="true"></div>
+              
+              <div class="lcd__face" id="pet-face" aria-hidden="true"></div>
+              
+              <div class="lcd__zzz" id="pet-zzz" aria-hidden="true">z z z</div>
+              
+              <div class="lcd__row lcd__row--name">
+                                <span id="pet-name">—</span>
+                <span id="pet-level">Nv. —</span>
+              </div>
+
+              <div class="lcd__bar" aria-label="Barra de vida (HP)">
+                                <span class="lcd__bar-label">HP</span>
+                <span class="lcd__bar-track">
+                  <span class="lcd__bar-fill lcd__bar-fill--hp" id="hp-fill"></span>
+                </span>
+              </div>
+
+              <div class="lcd__bar" aria-label="Barra de experiência (XP)">
+                                <span class="lcd__bar-label">XP</span>
+                <span class="lcd__bar-track">
+                  <span class="lcd__bar-fill lcd__bar-fill--xp" id="xp-fill"></span>
+                </span>
+              </div>
+
+              <div class="lcd__row lcd__row--mood" id="pet-mood">NEUTRAL</div>
+                          </div>
+          </div>
+
+          <div class="device__debuffs" id="debuff-list" aria-label="Alertas ativos"></div>
+                  </div>
+      </section>
+
+      <section class="diagnostics" aria-label="Diagnóstico de hardware">
+        
+        <h2 class="diagnostics__title">diagnóstico</h2>
+        
+        <div class="stat" data-stat="cpu">
+                    <span class="stat__label">CPU</span>
+          <span class="stat__track"><span class="stat__fill" id="cpu-fill"></span></span>
+          <span class="stat__value" id="cpu-value">—%</span>
+        </div>
+
+        <div class="stat" data-stat="cpu-temp">
+          <span class="stat__label">Temp. CPU</span>
+          <span class="stat__track"><span class="stat__fill stat__fill--temp" id="cputemp-fill"></span></span>
+          <span class="stat__value" id="cputemp-value">—°C</span>
+        </div>
+
+        <div class="stat" data-stat="board-temp">
+          <span class="stat__label">Temp. placa</span>
+          <span class="stat__track"><span class="stat__fill stat__fill--temp" id="boardtemp-fill"></span></span>
+          <span class="stat__value" id="boardtemp-value">—°C</span>
+        </div>
+
+        <div class="stat" data-stat="ram">
+          <span class="stat__label">RAM</span>
+          <span class="stat__track"><span class="stat__fill" id="ram-fill"></span></span>
+          <span class="stat__value" id="ram-value">—%</span>
+        </div>
+
+        <div class="stat" data-stat="swap">
+          <span class="stat__label">Swap</span>
+          <span class="stat__track"><span class="stat__fill" id="swap-fill"></span></span>
+          <span class="stat__value" id="swap-value">—%</span>
+        </div>
+
+        <div class="stat" data-stat="disk">
+          <span class="stat__label">Disco</span>
+          <span class="stat__track"><span class="stat__fill" id="disk-fill"></span></span>
+          <span class="stat__value" id="disk-value">—%</span>
+        </div>
+
+        <div class="stat-row">
+                    <div class="stat-row__item">
+            <span class="stat-row__label">Load (1/5/15m)</span>
+            <span class="stat-row__value" id="load-value">— / — / —</span>
+          </div>
+          <div class="stat-row__item">
+            <span class="stat-row__label">Uptime</span>
+            <span class="stat-row__value" id="uptime-value">—</span>
+          </div>
+        </div>
+
+        <div class="top-process" id="top-process">
+                    <span class="top-process__label">processo em destaque</span>
+          <span class="top-process__name" id="top-process-name">—</span>
+          <span class="top-process__cpu" id="top-process-cpu">—%</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="logfeed" aria-label="Histórico de eventos">
+            <div class="logfeed__header">
+        <span>histórico</span>
+      </div>
+      <div class="logfeed__list" id="log-list"></div>
+          </footer>
+  </div>
+
+  <script src="main.js"></script>
+  </body>
+</html>
